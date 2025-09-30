@@ -1,0 +1,5 @@
+while (condition)
+{
+    statement;
+    statement;
+}
