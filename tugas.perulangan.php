@@ -1,38 +1,63 @@
 <?php
-// Nama File: tugas_perulangan.php
+$nilai=90;
 
-echo "=== Perulangan FOR dari 100 sampai 1000 === <br>";
-for ($i = 100; $i <= 1000; $i++) {
-    echo $i . "<br>";
+echo "CONTOH IF ELSE <br>";
+if($nilai>=80 && $nilai<=100) {
+    echo "Selamat Anda mendapat grade A <br>";
+}
+elseif($nilai>=61 && $nilai<=79) {
+    echo "Selamat Anda mendapat grade B <br>";
+}
+elseif($nilai>=51 && $nilai<=60) {
+    echo "Selamat Anda mendapat grade C <br>";
+}
+elseif($nilai>=41 && $nilai<=50) {
+    echo "Selamat Anda mendapat grade D <br>";
+}
+elseif($nilai>=0 && $nilai<=40) {
+    echo "Maaf Anda mendapat grade E <br>";
+}
+else {
+    echo "Nilai tidak valid <br>";
+};
+
+echo "CONTOH SWITCH <br>";
+switch(true) {
+    case ($nilai>=80 && $nilai<=100) :
+        echo "Selamat Anda mendapat grade A <br>";
+        break;
+    case ($nilai>=61 && $nilai<=79) :
+        echo "Selamat Anda mendapat grade B <br>";
+        break;
+    case ($nilai>=51 && $nilai<=60) :
+        echo "Selamat Anda mendapat grade C <br>";
+        break;
+    case ($nilai>=41 && $nilai<=50) :
+        echo "Selamat Anda mendapat grade D <br>";
+        break;
+    case ($nilai>=0 && $nilai<=40) :
+        echo "Maaf Anda mendapat grade E <br>";
+        break;
+    default :
+        echo "Nilai tidak valid <br>";
+        break;
 }
 
-echo "<br>=== Perulangan WHILE dari 100 sampai 1000 === <br>";
-$j = 100;
-while ($j <= 1000) {
-    echo $j . "<br>";
+echo "CONTOH FOR <br>";
+for($i=1;$i<=5;$i++) {
+    echo "Looping FOR ke : ".$i."<br>";
+}
+
+echo "CONTOH WHILE <br>";
+$j=1;
+while($j<=5) {
+    echo "Looping While ke : ".$j."<br>";
     $j++;
 }
-
-echo "<br>=== Perulangan DO WHILE dari 100 sampai 1000 === <br>";
-$k = 100;
-do {
-    echo $k . "<br>";
-    $k++;
-} while ($k <= 1000);
-
-// Penjelasan penggunaan
-echo "<br>=== Penjelasan === <br>";
-echo "Perulangan digunakan untuk kasus ketika kita perlu menampilkan, menghitung, atau memproses data berulang kali tanpa menulis kode secara manual.<br>";
-echo "Contoh penggunaannya: mencetak data dalam tabel, menghitung jumlah item dalam keranjang belanja, membuat pagination, atau menjalankan logika validasi berulang.<br>";
 ?>
 
 
-
-
 <?php
-// ==================== Program 1: Keranjang Belanja ====================
-echo "=== Program 1: Keranjang Belanja ===<br><br>";
-
 $keranjang = [
     ["nama" => "Laptop", "harga" => 7000000],
     ["nama" => "Mouse", "harga" => 150000],
